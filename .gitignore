@@ -14,6 +14,8 @@ web/local/
 web/include/
 web/lib/
 web/pip-selfcheck.json
+web/chatbotcore/working_dir
+web/chatbotcore/data
 env/
 build/
 develop-eggs/
