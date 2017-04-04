@@ -6,7 +6,7 @@ Then activate the new environment:
 ```bash
 source bin/activate
 ```
-Then install the required files
+Then install the required files:
 ```bash
 pip tensorflow-gpu
 pip gunicorn
