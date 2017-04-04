@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Chatbot</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="static/css/style.css" rel="stylesheet" media="screen">
+      <script type="text/javascript" src="static/js/script.js"></script>
+      <script>
+      function sess() {
+        if(!sessionStorage.getItem('session')){
+            makeRequest('POST', '/start-session')
+                .then(function (resp) {
+                    data = JSON.parse(resp)
+                    sessionStorage.setItem('session', data['sess']);
+                })
+                .catch(function (err) {
+                    console.error('Augh, there was an error!', err.statusText);
+                });
+        }
+      }
+      window.onload = sess; 
+      </script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="col-xs-12 vertical-space"></div>
+         <div class="row">
+            <div class=" col-xs-2 col-xs-12"></div>
+            <div class=".col-xs-8 col-xs-10 col-xs-12 panel-chat panel-primary" >
+               <div class="panel-heading">
+                  <h3 class="panel-title">Chatbot</h3>
+               </div>
+               <div class="content" id="content">
+                  <div class="chat row bot-reponse-body" id="response-body">
+                  </div>
+               </div>
+               <div class="input-group">
+                  <input type="text" class="form-control" onkeypress=submit(event) placeholder="Type something..." id="message">
+                  <span class="input-group-btn">
+                    <input type="submit" class="btn btn-info"  onclick=send_msg() value="Send">
+                  </span>
+               </div>
+            <div class="col-xs-2 visible-lg-inline"></div>
+         </div>
+      </div>
+      </div>
+   </body>   
+</html>
+
