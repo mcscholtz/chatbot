@@ -8,16 +8,14 @@ See the data directory for how to obtain training data. After the training data 
 
 ## Training
 
+Edit seq2seq.ini file. Set mode = train
 ```bash
-# edit seq2seq.ini file to set 
-#		mode = train
 python execute.py
 ```
 
 ## Testing
 
+Edit seq2seq.ini file. Set mode = test
 ```bash
-# edit seq2seq.ini file to set 
-#		mode = test
 python execute.py
 ```
