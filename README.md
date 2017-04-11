@@ -37,4 +37,4 @@ The server can now be started by running the following command:
 ```
 from the web directory.
 
-This will only work if there is a trained model in the working_dir directory within chatbotcore. To get a pretrained model download this file: https://www.dropbox.com/s/sw3qk3sylaicerq/iteration3.tar.bz2 and extract it into the chatbotcore/working_dir folder. To train a new model see the readme under the chatbotcore directory.
+This will only work if there is a trained model in the working_dir directory within chatbotcore. To get a pretrained model download this file: https://www.dropbox.com/s/uzgo2ms4an19fti/iteration7.tar.bz2 and extract it into the chatbotcore/working_dir folder. To train a new model see the readme under the chatbotcore directory.
